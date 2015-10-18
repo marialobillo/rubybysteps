@@ -20,4 +20,8 @@ class ArrayTest < MiniTest::Test
   def test_pop_the_top
     asser(Array.new([1,2,3]).pop == 3)
   end
+
+  def test_pop_removes_the_top
+    assert(Array.new([1,2,3]).tap {|a| a.pop} == [1,2])
+  end
 end
