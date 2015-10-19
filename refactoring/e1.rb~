@@ -1,0 +1,21 @@
+class Foo
+  def something(bar)
+    bar.do_something
+  end
+end
+
+class Account
+  def initialize
+    @balance = "0"
+  end
+
+  def deposit(amount)
+    amount.times { @balance.succ! }
+  end
+
+  def balance
+    @balance.to_i
+  end
+
+  
+end
