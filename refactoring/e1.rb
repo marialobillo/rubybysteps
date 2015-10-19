@@ -16,6 +16,7 @@ class Account
   end
 
   def deposit(amount)
+    
     amount.times { @balance.succ! }
   end
 
