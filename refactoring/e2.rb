@@ -1,10 +1,13 @@
 class MyClass
   def top_users(users)
-    users.select {|u| u.registered? && u.registeres_before(3.days.ago)}.
-      reject {|u| u.role == "admin"}.
-      sort_by {|u| %w(email website twitter).index
-      u.referral_stream}.
-        first(5)
-    
+    admin_role = "admin"
+    referral_streams = %w(email website twitter)
+    at_most_users = 5
+    registration_threshold = 3.days.ago
+
+    users.select {|u| u.registered? && u.registered_before(registration_threshold) }.
+      reject {|u| u.role == admin_role }.
+      sort_by {|u| referral_streams.index u.referral_stream }.
+      first(at_most_users)
   end
 end
