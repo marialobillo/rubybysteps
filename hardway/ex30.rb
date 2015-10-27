@@ -23,3 +23,9 @@ if people > buses
 else
   puts "Fine, let's stay home then."
 end
+
+if cars > people && buses < cars
+  puts "Maybe we should take the plain."
+else
+  puts "We stil can not decide."
+end
