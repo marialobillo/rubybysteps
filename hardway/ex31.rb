@@ -3,7 +3,7 @@ def prompt
   print "> "
 end
 
-puts "You enter a dark room with two doors. Do you go through door #1 or door #2?"
+puts "You enter a dark room with two doors. Do you go through door #1 or door #2 or door #3?"
 
 prompt; door = gets.chomp
 
@@ -11,6 +11,7 @@ if door == "1"
   puts "There's a giant bear here eating a cheese cake. What do you do?"
   puts "1. Take the cake."
   puts "2. Scream at the bear."
+  puts "3. Sing a song to the bear"
 
   prompt; bear = gets.chomp
 
@@ -34,6 +35,21 @@ elsif door == "2"
     puts "Your body survives powered by a mind of jello. Good job!"
   else
     puts "The insanity rots your eyes into a pool of muck. Good job!"
+  end
+
+elsif door == "3"
+
+  puts "You sit next to him while you sing."
+  puts "1. A Lullaby."
+  puts "2. A rock song."
+  puts "3. A Beatles's song."
+
+  prompt; song = gets.chomp
+
+  if song == "1" or song == "2"
+    puts "Run, Run, Run!"
+  else
+    puts "You save!!, the bear is sleeping.!! Shsssss!"
   end
 
 else
