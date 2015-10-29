@@ -1,11 +1,13 @@
-i = 0
+i = 24
 numbers = []
+top = 38
+increment = 2
 
-while i < 6
+while i < top
   puts "At the top i is #{i}"
   numbers.push(i)
 
-  i += 1
+  i = i + increment
   puts "Numbers now: #{numbers}"
   puts "At the bottom i is #{i}"
 end
